@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="hg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#dc2626"/><stop offset="100%" style="stop-color:#ef4444"/>
+    </linearGradient>
+    <linearGradient id="sg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a0a"/><stop offset="100%" style="stop-color:#2d1515"/>
+    </linearGradient>
+    <linearGradient id="tg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#b91c1c"/><stop offset="100%" style="stop-color:#991b1b"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/><stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" rx="12" fill="#0a0505"/>
+
+  <text x="400" y="32" text-anchor="middle" fill="#fecaca" font-size="16" font-weight="700">Governance Policy MCP — Architecture</text>
+
+  <!-- Callers -->
+  <rect x="40" y="48" width="720" height="44" rx="8" fill="#2d1515" stroke="#dc2626" stroke-width="1"/>
+  <text x="400" y="75" text-anchor="middle" fill="#fca5a5" font-size="12" font-weight="600">All MCP Servers · Agents · Workflows · Operators · CI/CD · ADK-Payments</text>
+
+  <!-- Server -->
+  <rect x="40" y="108" width="720" height="250" rx="10" fill="url(#sg)" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="400" y="132" text-anchor="middle" fill="url(#hg)" font-size="14" font-weight="700">Governance Policy MCP Server — The Gatekeeper</text>
+
+  <!-- Tools -->
+  <rect x="55" y="148" width="165" height="42" rx="5" fill="url(#tg)"/>
+  <text x="137" y="166" text-anchor="middle" fill="#fef2f2" font-size="9" font-weight="600">evaluate_policy</text>
+  <text x="137" y="181" text-anchor="middle" fill="#fca5a5" font-size="8">allow · block · review · pause</text>
+
+  <rect x="228" y="148" width="140" height="42" rx="5" fill="url(#tg)"/>
+  <text x="298" y="166" text-anchor="middle" fill="#fef2f2" font-size="9" font-weight="600">request_approval</text>
+  <text x="298" y="181" text-anchor="middle" fill="#fca5a5" font-size="8">HITL approval tasks</text>
+
+  <rect x="376" y="148" width="140" height="42" rx="5" fill="url(#tg)"/>
+  <text x="446" y="166" text-anchor="middle" fill="#fef2f2" font-size="9" font-weight="600">resolve_approval</text>
+  <text x="446" y="181" text-anchor="middle" fill="#fca5a5" font-size="8">approve · reject · changes</text>
+
+  <rect x="524" y="148" width="105" height="42" rx="5" fill="url(#tg)"/>
+  <text x="576" y="166" text-anchor="middle" fill="#fef2f2" font-size="9" font-weight="600">simulate</text>
+  <text x="576" y="181" text-anchor="middle" fill="#fca5a5" font-size="8">test policy packs</text>
+
+  <rect x="637" y="148" width="110" height="42" rx="5" fill="url(#tg)"/>
+  <text x="692" y="166" text-anchor="middle" fill="#fef2f2" font-size="9" font-weight="600">export_audit</text>
+  <text x="692" y="181" text-anchor="middle" fill="#fca5a5" font-size="8">compliance packs</text>
+
+  <!-- Risk Domains -->
+  <rect x="55" y="205" width="695" height="65" rx="6" fill="url(#bg)" stroke="#334155" stroke-width="1"/>
+  <text x="400" y="225" text-anchor="middle" fill="#f1f5f9" font-size="11" font-weight="600">Risk Domains</text>
+  <text x="110" y="248" text-anchor="middle" fill="#fca5a5" font-size="8">Financial</text>
+  <text x="200" y="248" text-anchor="middle" fill="#fca5a5" font-size="8">Identity</text>
+  <text x="290" y="248" text-anchor="middle" fill="#fca5a5" font-size="8">Prod Deploy</text>
+  <text x="390" y="248" text-anchor="middle" fill="#86efac" font-size="8">Tool Write</text>
+  <text x="480" y="248" text-anchor="middle" fill="#86efac" font-size="8">External Write</text>
+  <text x="575" y="248" text-anchor="middle" fill="#fca5a5" font-size="8">Credential</text>
+  <text x="665" y="248" text-anchor="middle" fill="#fca5a5" font-size="8">Data Export</text>
+
+  <!-- Decision labels -->
+  <rect x="90" y="256" width="50" height="10" rx="2" fill="#dc2626" opacity="0.3"/>
+  <rect x="180" y="256" width="50" height="10" rx="2" fill="#dc2626" opacity="0.3"/>
+  <rect x="270" y="256" width="50" height="10" rx="2" fill="#dc2626" opacity="0.3"/>
+  <rect x="370" y="256" width="50" height="10" rx="2" fill="#22c55e" opacity="0.3"/>
+  <rect x="460" y="256" width="50" height="10" rx="2" fill="#22c55e" opacity="0.3"/>
+  <rect x="555" y="256" width="50" height="10" rx="2" fill="#f59e0b" opacity="0.3"/>
+  <rect x="645" y="256" width="50" height="10" rx="2" fill="#dc2626" opacity="0.3"/>
+
+  <!-- Decision flow -->
+  <rect x="55" y="282" width="695" height="60" rx="6" fill="#0c0808" stroke="#334155" stroke-width="1"/>
+  <text x="400" y="302" text-anchor="middle" fill="#fecaca" font-size="10" font-weight="600">Decision Flow</text>
+  <text x="130" y="325" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="700">ALLOW</text>
+  <text x="300" y="325" text-anchor="middle" fill="#f59e0b" font-size="11" font-weight="700">REVIEW</text>
+  <text x="470" y="325" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="700">BLOCK</text>
+  <text x="640" y="325" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="700">PAUSE</text>
+  <text x="130" y="337" text-anchor="middle" fill="#94a3b8" font-size="7">proceed</text>
+  <text x="300" y="337" text-anchor="middle" fill="#94a3b8" font-size="7">needs approval</text>
+  <text x="470" y="337" text-anchor="middle" fill="#94a3b8" font-size="7">denied</text>
+  <text x="640" y="337" text-anchor="middle" fill="#94a3b8" font-size="7">needs verification</text>
+
+  <!-- Badges -->
+  <rect x="40" y="375" width="85" height="22" rx="4" fill="#dc2626"/>
+  <text x="82" y="390" text-anchor="middle" fill="white" font-size="9" font-weight="600">rmcp 1.7</text>
+
+  <rect x="133" y="375" width="75" height="22" rx="4" fill="#b91c1c"/>
+  <text x="170" y="390" text-anchor="middle" fill="white" font-size="9" font-weight="600">8 Tools</text>
+
+  <rect x="216" y="375" width="100" height="22" rx="4" fill="#7c3aed"/>
+  <text x="266" y="390" text-anchor="middle" fill="white" font-size="9" font-weight="600">8 Risk Domains</text>
+
+  <rect x="324" y="375" width="110" height="22" rx="4" fill="#0891b2"/>
+  <text x="379" y="390" text-anchor="middle" fill="white" font-size="9" font-weight="600">Approval Queue</text>
+
+  <rect x="442" y="375" width="110" height="22" rx="4" fill="#059669"/>
+  <text x="497" y="390" text-anchor="middle" fill="white" font-size="9" font-weight="600">Policy Simulation</text>
+
+  <rect x="560" y="375" width="95" height="22" rx="4" fill="#d97706"/>
+  <text x="607" y="390" text-anchor="middle" fill="white" font-size="9" font-weight="600">Audit Export</text>
+
+  <rect x="663" y="375" width="97" height="22" rx="4" fill="#be185d"/>
+  <text x="711" y="390" text-anchor="middle" fill="white" font-size="9" font-weight="600">Enterprise</text>
+
+  <!-- Non-bypassable note -->
+  <rect x="40" y="410" width="720" height="35" rx="6" fill="#1a0505" stroke="#7f1d1d" stroke-width="1"/>
+  <text x="400" y="432" text-anchor="middle" fill="#fca5a5" font-size="10" font-weight="600">⚠️  This server is the gatekeeper — should not be bypassable by downstream MCPs</text>
+
+  <text x="400" y="470" text-anchor="middle" fill="#475569" font-size="10">enterprise.adk-rust.com · Zavora AI · Apache-2.0</text>
+</svg>
