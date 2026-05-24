@@ -1,3 +1,4 @@
+use adk_mcp_sdk::{HealthCheck, HealthStatus};
 use chrono::Utc;
 use rmcp::{handler::server::wrapper::Parameters, schemars, tool, tool_router};
 use serde::{Deserialize, Serialize};
@@ -220,5 +221,16 @@ impl GovernancePolicyServer {
             "approval_tasks": approvals,
             "policy_exceptions": exceptions,
         })).unwrap()
+    }
+}
+
+#[async_trait::async_trait]
+impl HealthCheck for GovernancePolicyServer {
+    async fn check_health(&self) -> HealthStatus {
+        HealthStatus {
+            healthy: true,
+            message: Some("operational".into()),
+            latency_ms: Some(1),
+        }
     }
 }
